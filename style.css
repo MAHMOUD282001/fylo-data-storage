@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background: url(./images/bg-desktop.png);
+    background-color: hsl(229, 57%, 11%);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    
+}
+.content{
+    width: 100%;
+}
+
+.container{
+    max-width: 1450px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left{
+    width: 300px;
+    height: 170px;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px;
+    border-top-right-radius: 100px;
+    padding: 30px
+}
+
+.left .logo{
+    margin-bottom: 25px;
+}
+
+.left .icons{
+    display: flex;
+}
+
+.left .icons .icon{
+    background-color: hsl(229, 57%, 11%);
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.left .icons .icon img{
+    width: 20px;
+}
+
+.left .icons .icon:nth-of-type(1) img{
+    width: 16px;
+}
+
+.right{
+    width: 500px;
+    height: 120px;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px;
+    padding: 30px;
+    color: hsl(243, 100%, 93%);
+}
+
+.right p span{
+    color: #fff;
+}
+
+.right > div{
+    width:100%;
+    height: 14px;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 30px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.right > div::before{
+    content: '';
+    border-style: solid;
+    border-width: 10px;
+    border-color: #fff transparent  transparent transparent;
+    height: 20px;
+    width: 0;
+    position: absolute;
+    right: 6px;
+    top: -50px;
+}
+
+.right > div span{
+    position: absolute;
+    left: 2px;
+    top: 1px;
+    width: 80%;
+    height: 12px;
+    background-image: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    background-color: black;
+    border-radius: 30px;
+}
+
+.right > div p:nth-of-type(1){
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+}
+
+.right > div p:nth-of-type(2){
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+}
+
+
+.right > div div{
+    position: absolute;
+    right: 0;
+    top: -100px;
+    background-color: #fff;
+    width: 120px;
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+
+.right > div div span.span{
+    font-size: 15px;
+    position: relative;
+    background: none;
+    color: hsl(229, 7%, 55%);
+}
+
+
+@media(max-width:1070px){
+    .container{
+        padding: 0 80px;
+    }
+}
+
+@media(max-width:970px){
+    
+    body{
+        background: url(./images/bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 500px;
+    }
+}
+
+
+@media(max-width:530px){
+
+    .right > div::before{
+        content: none;
+    }
+    
+    .right > div div {
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        top: 50px;
+    }
+    
+    .right{
+        width: 300px;
+        height: 150px;
+    }
+}
